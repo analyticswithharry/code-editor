@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Code & Comment Editor</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</head>
+<body>
+    <div class="container" role="main" aria-label="Professional Code Editor and Preview">
+        <div class="toolbar" role="toolbar" aria-label="Editor Controls">
+            <div class="dots" aria-hidden="true">
+                <div class="dot red"></div>
+                <div class="dot yellow"></div>
+                <div class="dot green"></div>
+            </div>
+            <div style="display: flex; gap: 14px; align-items: center;">
+                <button id="bgWhite" class="apple-button active" onclick="setBackground('white')" aria-pressed="true" title="Light Theme">🌕</button>
+                <button id="bgDark" class="apple-button" onclick="setBackground('dark')" aria-pressed="false" title="Dark Theme">🌑</button>
+                <input type="color" id="bgColor" class="apple-button" onchange="applyBgColor()" value="#f9fafb" aria-label="Preview Background Color" title="Select Background Color" />
+                <select id="fontSelect" class="apple-button" onchange="applyFont()" aria-label="Font Family" title="Choose Font">
+                    <option value="San Francisco">San Francisco</option>
+                    <option value="Helvetica">Helvetica</option>
+                    <option value="Arial">Arial</option>
+                    <option value="Times New Roman">Times New Roman</option>
+                    <option value="Courier New">Courier New</option>
+                    <option value="Georgia">Georgia</option>
+                    <option value="Verdana">Verdana</option>
+                    <option value="Trebuchet MS">Trebuchet MS</option>
+                    <option value="Palatino">Palatino</option>
+                    <option value="Garamond">Garamond</option>
+                </select>
+                <select id="langSelect" class="apple-button" onchange="applyLanguage()" aria-label="Programming Language" title="Select Language">
+                    <option value="auto">Auto</option>
+                    <option value="javascript">JavaScript</option>
+                    <option value="python">Python</option>
+                    <option value="java">Java</option>
+                    <option value="cpp">C++</option>
+                    <option value="csharp">C#</option>
+                    <option value="php">PHP</option>
+                    <option value="ruby">Ruby</option>
+                    <option value="swift">Swift</option>
+                    <option value="kotlin">Kotlin</option>
+                </select>
+                <button id="applyBold" class="apple-button" onclick="toggleBold()" aria-pressed="false" title="Toggle Bold">𝐁</button>
+                <button id="applyItalic" class="apple-button" onclick="toggleItalic()" aria-pressed="false" title="Toggle Italic">𝑰</button>
+                <select id="fontSize" class="apple-button" onchange="applyFontSize()" aria-label="Font Size" title="Adjust Font Size">
+                    <option value="12">12px</option>
+                    <option value="14">14px</option>
+                    <option value="16">16px</option>
+                    <option value="18" selected>18px</option>
+                    <option value="20">20px</option>
+                    <option value="22">22px</option>
+                    <option value="24">24px</option>
+                </select>
+            </div>
+        </div>
+        <textarea id="codeInput" placeholder="Paste your code here..." spellcheck="false" aria-label="Code Input Area"></textarea>
+        <input type="text" id="commentInput" placeholder="Add watermark" spellcheck="false" aria-label="Comment Input" />
+        <div class="buttons">
+            <button class="preview-button apple-button" onclick="generatePreview()" aria-label="Generate Preview">Generate Preview</button>
+            <button class="export-button apple-button" onclick="captureScreenshot('png')" aria-label="Export as PNG">Export PNG</button>
+            <button class="export-button apple-button" onclick="captureScreenshot('jpg')" aria-label="Export as JPG">Export JPG</button>
+        </div>
+        <div id="preview" aria-live="polite" role="region" aria-label="Code Preview" tabindex="0"></div>
+        <div class="analytics" role="region" aria-label="Analytics and Support">
+            <p>Analytics With Harry - Copyright 2024 ©
+            <p>For support, Email: <span class="email" onclick="window.location.href='mailto:hemantthapa1998@gmail.com'">hemantthapa1998@gmail.com</span></p>
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
