@@ -10,7 +10,7 @@ Background Color: Select a custom background color for the preview using the col
 Font: Choose a font from the dropdown (e.g., San Francisco, Helvetica).
 Language: Select a programming language for syntax highlighting (e.g., JavaScript, Python) or use "Auto".
 Font Size: Adjust the font size via the dropdown (12px to 24px).
-Bold/Italic: Toggle bold (𝐁) or italic (𝑰) formatting for the code preview.
+Bold/Italic: Toggle bold (𝐁) or italic (𝐈) formatting for the code preview.
 
 
 Generate Preview: Click "Generate Preview" to display the formatted code with syntax highlighting.
@@ -23,7 +23,6 @@ npm install
 
 
 Run Locally:
-
 node server.js
 
 Access at http://localhost:3000.
