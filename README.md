@@ -2,7 +2,7 @@ Code Editor
 A professional code and comment editor with syntax highlighting, theme switching, and image export features.
 How to Use
 
-Paste Code: Enter your code in the textarea provided.
+Paste Code: Enter your code in the provided textarea.
 Add Watermark: Optionally, add a comment or watermark in the input field below the textarea.
 Customize Appearance:
 Theme: Toggle between light (🌕) and dark (🌑) modes using the toolbar buttons.
@@ -38,7 +38,7 @@ git remote add origin <your-repo-url>
 git push -u origin main
 
 
-In Netlify:
+Deploy on Netlify:
 
 Go to Netlify.
 Click Add new site > Import an existing project.
@@ -51,6 +51,6 @@ Click Deploy site.
 Notes
 
 server.js is for local development only; Netlify serves static files from public/.
-Requires express for local server.
+Requires express for the local server.
 Analytics: Tracks the number of previews generated (displayed in the analytics section).
 Support: Contact hemantthapa1998@gmail.com for assistance.
